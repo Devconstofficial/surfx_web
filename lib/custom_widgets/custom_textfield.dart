@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/app_styles.dart';
@@ -57,8 +57,8 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getHeight(height),
-      width: getWidth(width),
+      height: height,
+      width: width,
       decoration: BoxDecoration(
         color: kWhiteColor,
         borderRadius: BorderRadius.circular(borderRadius),

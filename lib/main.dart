@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           theme: buildTheme(Brightness.light),
-          title: 'SurfXChange',
+          title: 'Rebarreled',
+          defaultTransition: Transition.noTransition,
           debugShowCheckedModeBanner: false,
           initialBinding: ScreenBindings(),
           initialRoute: kLoginScreenRoute,

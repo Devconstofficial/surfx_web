@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_styles.dart';
 
@@ -38,8 +38,8 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: getHeight(height),
-        width: getWidth(width),
+        height: height,
+        width: width,
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(borderRadius),
@@ -52,9 +52,9 @@ class CustomButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             icon != null
-                ? Image.asset(icon!, height: getHeight(18), width: getWidth(18))
+                ? Image.asset(icon!, height: 18, width: 18)
                 : SizedBox.shrink(),
-            icon != null ? SizedBox(width: getWidth(10)) : SizedBox.shrink(),
+            icon != null ? SizedBox(width: 10) : SizedBox.shrink(),
             Text(
               title,
               textAlign: TextAlign.center,
